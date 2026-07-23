@@ -1,0 +1,33 @@
+{
+  "brand": "آتلیه نوآر",
+  "tagline": "سکوت را بپوش.",
+  "currency": "تومان",
+  "direction": "rtl",
+  "meta": {
+    "home": "بوتیک لوکس و سینمایی پوشاک زنانه و مردانه.",
+    "shop": "کاتالوگ محصولات ادیتوریال با فیلترهای پیشرفته."
+  },
+  "homeCinematic": {
+    "manifestoEyebrow": "مانیفست / سکوت به‌عنوان ماده",
+    "manifestoLine": "لباس‌هایی که پیش از شما وارد اتاق می‌شوند.",
+    "filmStripEyebrow": "ادیت شاخص / شش فریم",
+    "filmStripTitle": "کالکشنی که مانند فیلم نمایش داده می‌شود.",
+    "cinematographerEyebrow": "اسکرول فیلم‌بردار",
+    "cinematographerTitle": "دوربین، لباس را یاد می‌گیرد.",
+    "sceneOne": "نور عاجی. کت، چارچوب در را مانند معماری نگه می‌دارد.",
+    "sceneTwo": "سایه از ابریشم می‌گذرد؛ سیلوئت بی‌صدا پاسخ می‌دهد.",
+    "sceneThree": "ترنچ شامپاینی هوا را می‌شکافد، نه توجه را.",
+    "sceneFour": "فریم آخر: مرمر، نفس، خویشتن‌داری.",
+    "fabricPhysicsEyebrow": "فیزیک پارچه / ساخت قابل ردیابی",
+    "fabricPhysicsTitle": "پارچه هر دست را به خاطر می‌سپارد.",
+    "atelierLiveEyebrow": "آتلیه زنده",
+    "atelierLiveTitle": "نبضی از میز برش.",
+    "footerPrologueEyebrow": "پرولوگ / ادامه",
+    "footerPrologueTitle": "فیلم بسته می‌شود. پرو آغاز می‌شود.",
+    "enter": "ورود",
+    "trace": "ردیابی",
+    "nowCutting": "در حال برش",
+    "tehran": "تهران",
+    "localTime": "زمان محلی"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "brand": "ATELIER NOIR",
+  "tagline": "Wear the Silence.",
+  "currency": "USD",
+  "direction": "ltr",
+  "meta": {
+    "home": "Cinematic luxury fashion boutique for men and women.",
+    "shop": "Advanced editorial product catalog."
+  },
+  "homeCinematic": {
+    "manifestoEyebrow": "Manifesto / Silence as material",
+    "manifestoLine": "Garments that enter the room before you do.",
+    "filmStripEyebrow": "Signature edit / Six frames",
+    "filmStripTitle": "A collection projected as film.",
+    "cinematographerEyebrow": "Cinematographer's scroll",
+    "cinematographerTitle": "The camera learns the garment.",
+    "sceneOne": "Ivory light. A coat holds the doorframe like architecture.",
+    "sceneTwo": "Shadow crosses silk; the silhouette answers without volume.",
+    "sceneThree": "A champagne trench cuts through air, never through attention.",
+    "sceneFour": "The final frame: marble, breath, restraint.",
+    "fabricPhysicsEyebrow": "Fabric physics / Traceable craft",
+    "fabricPhysicsTitle": "Cloth remembers every hand.",
+    "atelierLiveEyebrow": "The atelier live",
+    "atelierLiveTitle": "A pulse from the cutting table.",
+    "footerPrologueEyebrow": "Prologue / Continue",
+    "footerPrologueTitle": "The film closes. The fitting begins.",
+    "enter": "Enter",
+    "trace": "Trace",
+    "nowCutting": "Now cutting",
+    "tehran": "Tehran",
+    "localTime": "local time"
+  }
+}
