@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="رویاخواب لوکس؛ فروشگاه تخصصی تشک، لحاف و کالای خواب با تجربه خرید هوشمند، فیلترهای پیشرفته و پیشنهادگر خواب." />
+  <title>رویاخواب لوکس | فروش تشک و لحاف</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <nav class="navbar" aria-label="ناوبری اصلی">
+      <a class="brand" href="#hero-section" aria-label="رویاخواب لوکس">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img">
+            <path d="M10 37c7-19 21-29 42-30-1 22-12 38-35 46 7-7 11-14 13-22-7 3-13 4-20 6Z" />
+            <path d="M18 44c11 1 22-2 33-11" />
+          </svg>
+        </span>
+        <span class="brand-text"><strong>رویاخواب</strong><small>Luxury Sleep Studio</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="باز کردن منو" aria-expanded="false"
+        aria-controls="primary-menu">
+        <svg class="hamburger-svg" viewBox="0 0 48 48" aria-hidden="true">
+          <path class="line line-top" d="M10 15h28" />
+          <path class="line line-middle" d="M10 24h28" />
+          <path class="line line-bottom" d="M10 33h28" />
+        </svg>
+      </button>
+
+      <ul class="primary-menu" id="primary-menu">
+        <li><a href="#products-section">محصولات</a></li>
+        <li><a href="#advisor-section">پیشنهادگر خواب</a></li>
+        <li><a href="#innovation-section">تجربه خاص</a></li>
+        <li><a href="#journal-section">راهنما</a></li>
+        <li><a href="#contact-section">تماس</a></li>
+      </ul>
+
+      <div class="nav-actions" aria-label="اقدامات سریع">
+        <button class="icon-button" id="search-focus" type="button" aria-label="جستجو"><i
+            class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-button badge-holder" id="favorites-open" type="button" aria-label="علاقه‌مندی‌ها"><i
+            class="fa-regular fa-heart"></i><span class="badge" id="fav-count">0</span></button>
+        <button class="cta-button" id="cart-open" type="button"><i
+            class="fa-solid fa-bag-shopping"></i><span>سبد</span><b id="cart-count">0</b></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section" id="hero-section">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+      <article class="hero-content reveal-up">
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> تجربه خواب شخصی‌سازی‌شده</span>
+        <h1>تشک و کالای خواب لوکس، انتخاب‌شده با هوش خواب شما</h1>
+        <p>با فیلترهای حرفه‌ای، پیشنهادگر هوشمند و شبیه‌ساز حس اتاق خواب، محصولی را پیدا کنید که دقیقاً با بدن، سبک
+          زندگی و دکور شما هماهنگ است.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#products-section">مشاهده محصولات</a>
+          <a class="ghost-button" href="#advisor-section"><i class="fa-solid fa-wand-magic-sparkles"></i> شروع تست
+            خواب</a>
+        </div>
+        <dl class="hero-stats" aria-label="آمار فروشگاه">
+          <div>
+            <dt>۱۲۸+</dt>
+            <dd>مدل منتخب</dd>
+          </div>
+          <div>
+            <dt>۴.۹</dt>
+            <dd>امتیاز رضایت</dd>
+          </div>
+          <div>
+            <dt>۱۰۰ شب</dt>
+            <dd>ضمانت تست</dd>
+          </div>
+        </dl>
+      </article>
+      <aside class="hero-visual reveal-scale" aria-label="نمایش محصول شاخص">
+        <div class="floating-card sleep-score-card"><span>امتیاز آرامش</span><strong id="hero-score">۹۴٪</strong></div>
+        <div class="mattress-stage">
+          <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80"
+            alt="اتاق خواب لوکس با تشک و کالای خواب روشن" />
+        </div>
+        <div class="floating-card delivery-card"><i class="fa-solid fa-truck-fast"></i><span>ارسال VIP و نصب
+            رایگان</span></div>
+      </aside>
+    </section>
+
+    <section class="trust-strip" aria-label="مزیت‌ها">
+      <span><i class="fa-solid fa-shield-heart"></i> ضمانت اصالت</span>
+      <span><i class="fa-solid fa-moon"></i> تست ۱۰۰ شب</span>
+      <span><i class="fa-solid fa-leaf"></i> الیاف ضد حساسیت</span>
+      <span><i class="fa-solid fa-ruler-combined"></i> سفارش اندازه اختصاصی</span>
+    </section>
+
+    <section class="products-section" id="products-section">
+      <div class="section-heading reveal-up">
+        <span class="eyebrow">کالکشن رویایی</span>
+        <h2>فروشگاه حرفه‌ای با فیلترهای دقیق</h2>
+        <p>براساس نوع خواب، درجه سفتی، دما، ارتفاع، متریال، بودجه و حتی حساسیت بدنی انتخاب کنید.</p>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters-panel reveal-up" aria-label="فیلتر محصولات">
+          <div class="filters-head">
+            <h3>فیلتر پیشرفته</h3>
+            <button type="button" id="reset-filters">پاک کردن</button>
+          </div>
+          <label class="field-label" for="search-input">جستجو</label>
+          <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="search-input" type="search"
+              placeholder="تشک طبی، لحاف، مموری فوم..." /></div>
+
+          <div class="filter-grid">
+            <label>دسته‌بندی<select id="category-filter">
+                <option value="all">همه</option>
+              </select></label>
+            <label>نوع خواب<select id="sleep-filter">
+                <option value="all">همه حالت‌ها</option>
+                <option value="side">پهلو</option>
+                <option value="back">طاق‌باز</option>
+                <option value="stomach">روی شکم</option>
+                <option value="mixed">ترکیبی</option>
+              </select></label>
+            <label>درجه سفتی<select id="firmness-filter">
+                <option value="all">همه</option>
+                <option value="soft">نرم</option>
+                <option value="medium">متعادل</option>
+                <option value="firm">سفت</option>
+              </select></label>
+            <label>تنظیم دما<select id="cooling-filter">
+                <option value="all">همه</option>
+                <option value="cool">خنک‌کننده</option>
+                <option value="warm">گرم و نرم</option>
+                <option value="balanced">چهارفصل</option>
+              </select></label>
+            <label>متریال<select id="material-filter">
+                <option value="all">همه</option>
+                <option value="latex">لاتکس</option>
+                <option value="memory">مموری فوم</option>
+                <option value="spring">فنر پاکتی</option>
+                <option value="cotton">پنبه</option>
+                <option value="bamboo">بامبو</option>
+              </select></label>
+            <label>حساسیت<select id="allergy-filter">
+                <option value="all">مهم نیست</option>
+                <option value="yes">ضد حساسیت</option>
+              </select></label>
+            <label>ارتفاع<select id="height-filter">
+                <option value="all">همه</option>
+                <option value="low">کمتر از ۲۰cm</option>
+                <option value="mid">۲۰ تا ۳۰cm</option>
+                <option value="high">بیش از ۳۰cm</option>
+              </select></label>
+            <label>مرتب‌سازی<select id="sort-filter">
+                <option value="featured">پیشنهادی</option>
+                <option value="price-asc">ارزان‌تر</option>
+                <option value="price-desc">گران‌تر</option>
+                <option value="rating-desc">بیشترین امتیاز</option>
+                <option value="newest">جدیدترین</option>
+              </select></label>
+          </div>
+
+          <div class="range-group">
+            <div><span>بودجه تا</span><strong id="price-value">۸۰,۰۰۰,۰۰۰ تومان</strong></div>
+            <input id="price-filter" type="range" min="5000000" max="80000000" step="1000000" value="80000000" />
+          </div>
+
+          <fieldset class="chip-fieldset">
+            <legend>ویژگی‌های خاص</legend>
+            <label><input type="checkbox" value="orthopedic" class="feature-filter"> طبی</label>
+            <label><input type="checkbox" value="zeroMotion" class="feature-filter"> بدون انتقال حرکت</label>
+            <label><input type="checkbox" value="hotel" class="feature-filter"> هتلی</label>
+            <label><input type="checkbox" value="eco" class="feature-filter"> اکو</label>
+          </fieldset>
+        </aside>
+
+        <section class="products-area" aria-label="لیست محصولات">
+          <div class="toolbar reveal-up">
+            <p id="results-count">در حال بارگذاری...</p>
+            <div class="toolbar-actions">
+              <button class="view-button active" data-view="grid" type="button" aria-label="نمای شبکه‌ای"><i
+                  class="fa-solid fa-grip"></i></button>
+              <button class="view-button" data-view="list" type="button" aria-label="نمای لیستی"><i
+                  class="fa-solid fa-list"></i></button>
+            </div>
+          </div>
+          <div class="products-grid" id="products-grid"></div>
+          <div class="pagination" id="pagination"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="advisor-section" id="advisor-section">
+      <div class="section-heading reveal-up">
+        <span class="eyebrow">Smart Sleep Match</span>
+        <h2>پیشنهادگر خواب با پروفایل بدن</h2>
+        <p>به چند سؤال کوتاه پاسخ دهید تا سایت سطح سفتی، دمای خواب و مدل مناسب شما را پیشنهاد کند.</p>
+      </div>
+      <div class="advisor-card reveal-scale">
+        <div class="advisor-progress"><span id="quiz-progress"></span></div>
+        <div id="quiz-content"></div>
+      </div>
+    </section>
+
+    <section class="innovation-section" id="innovation-section">
+      <div class="section-heading reveal-up">
+        <span class="eyebrow">چیزی فراتر از فروشگاه</span>
+        <h2>ابزارهای خاصی که تجربه خرید را متفاوت می‌کند</h2>
+      </div>
+      <div class="innovation-grid">
+        <article class="innovation-card reveal-up">
+          <i class="fa-solid fa-temperature-half"></i>
+          <h3>شبیه‌ساز اقلیم خواب</h3>
+          <p>دمای اتاق و عادت گرمایی خود را تنظیم کنید تا متریال مناسب پیشنهاد شود.</p>
+          <input id="climate-range" type="range" min="16" max="30" value="22">
+          <strong id="climate-result">برای ۲۲ درجه: الیاف چهارفصل و تنفس‌پذیر</strong>
+        </article>
+        <article class="innovation-card reveal-up">
+          <i class="fa-solid fa-bed-pulse"></i>
+          <h3>نقشه فشار بدن</h3>
+          <p>با انتخاب حالت خواب، نواحی فشار روی تشک را ببینید و سفتی مناسب را تشخیص دهید.</p>
+          <div class="pressure-map" id="pressure-map"><span></span><span></span><span></span></div>
+          <div class="mini-buttons"><button data-pressure="side">پهلو</button><button
+              data-pressure="back">طاق‌باز</button><button data-pressure="stomach">شکم</button></div>
+        </article>
+        <article class="innovation-card reveal-up">
+          <i class="fa-solid fa-palette"></i>
+          <h3>هماهنگ‌ساز دکور</h3>
+          <p>پالت اتاق را تغییر دهید و حس کالای خواب را روی فضای نمونه ببینید.</p>
+          <div class="room-preview" id="room-preview"><span></span></div>
+          <div class="palette-buttons"><button style="--c:#d8a47f" data-color="#d8a47f"></button><button
+              style="--c:#8aa399" data-color="#8aa399"></button><button style="--c:#b7a7d9"
+              data-color="#b7a7d9"></button><button style="--c:#c96f62" data-color="#c96f62"></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="compare-section" aria-label="مقایسه محصولات">
+      <div class="compare-head">
+        <h2>مقایسه سریع</h2><button id="clear-compare" type="button">حذف همه</button>
+      </div>
+      <div class="compare-table-wrap" id="compare-wrap">
+        <p>برای مقایسه، روی دکمه «مقایسه» محصولات کلیک کنید.</p>
+      </div>
+    </section>
+
+    <section class="journal-section" id="journal-section">
+      <div class="section-heading reveal-up"><span class="eyebrow">راهنمای تخصصی</span>
+        <h2>دانستنی‌های خواب بهتر</h2>
+      </div>
+      <div class="journal-grid">
+        <article class="journal-card reveal-up"><span>راهنمای خرید</span>
+          <h3>چطور سفتی تشک را با وزن و حالت خواب انتخاب کنیم؟</h3>
+          <p>سفتی مناسب فشار شانه و کمر را کم می‌کند و کیفیت خواب را بالا می‌برد.</p>
+        </article>
+        <article class="journal-card reveal-up"><span>سلامت</span>
+          <h3>مموری فوم، لاتکس یا فنر پاکتی؟</h3>
+          <p>هر متریال حس، تهویه و پشتیبانی متفاوتی دارد؛ انتخاب درست به عادت خواب شما وابسته است.</p>
+        </article>
+        <article class="journal-card reveal-up"><span>دکور</span>
+          <h3>ست کردن لحاف با نور و پالت اتاق</h3>
+          <p>رنگ و بافت کالای خواب، حس آرامش اتاق را به شکل چشمگیری تغییر می‌دهد.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact-section">
+    <div><a class="brand footer-brand" href="#hero-section"><span class="brand-mark"><svg viewBox="0 0 64 64">
+            <path d="M10 37c7-19 21-29 42-30-1 22-12 38-35 46 7-7 11-14 13-22-7 3-13 4-20 6Z" />
+            <path d="M18 44c11 1 22-2 33-11" />
+          </svg></span><span class="brand-text"><strong>رویاخواب</strong><small>Luxury Sleep Studio</small></span></a>
+      <p>فروشگاه تخصصی تشک، لحاف و کالای خواب با طراحی تجربه خرید هوشمند.</p>
+    </div>
+    <div>
+      <h3>تماس</h3>
+      <p>تهران، مرکز تجربه خواب رویاخواب</p>
+      <p>۰۲۱-۰۰۰۰۰۰۰۰</p>
+    </div>
+    <div>
+      <h3>خبرنامه خواب</h3>
+      <form class="newsletter" id="newsletter-form"><input type="email" placeholder="ایمیل شما"
+          required><button>عضویت</button></form>
+    </div>
+  </footer>
+
+  <aside class="drawer" id="side-drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="بستن"><i
+          class="fa-solid fa-xmark"></i></button>
+      <h2 id="drawer-title">سبد خرید</h2>
+      <div id="drawer-content"></div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

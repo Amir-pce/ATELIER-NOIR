@@ -1,68 +1,82 @@
-# ATELIER-NOIR
-# ATELIER NOIR — Cinematic Luxury Fashion
+# رویاخواب لوکس | Luxury Sleep Studio
 
-## Project goal
-ATELIER NOIR is a bilingual EN/FA, RTL-aware static luxury fashion boutique. The homepage has been rebuilt as a scroll-driven cinematic experience for editorial commerce, preserving the existing injected header/nav and the existing cart, wishlist, compare, and locale state managed by `js/app.js`.
+## Ziel des Projekts
+Eine hochwertige, moderne, statische E-Commerce-Landingpage für تشک، لحاف و کالای خواب mit persischer RTL-Oberfläche, professionellem Header, SVG-Menü, GSAP-Animationen, erweiterten Filtern und einzigartigen interaktiven Beratungstools.
 
-## Currently completed features
-- Rebuilt `body[data-page="home"]` homepage below the frozen header/navigation.
-- Cinematic hero with retained autoplay runway video, parallax zoom, marquee tagline, split-character title reveal, and contextual cursor state.
-- New pinned manifesto reveal with scroll-scrubbed word illumination.
-- New horizontal 35mm film-strip product moment populated from `window.ATELIER_DATA.products[0..5]`.
-- Product film-cell hover interactions and GSAP Flip-based quickview modal.
-- New cinematographer scroll section with sticky viewfinder, rule-of-thirds grid, REC dot, shutter flash, scene crossfades, shake, and scroll-driven timecode.
-- New fabric physics gallery with SVG displacement ripple and traceability timelines from product `trace` arrays.
-- New infinite intentions marquees with GSAP modifiers and hover slow-down.
-- New atelier live section with lazy-loaded video and rotating Tehran-time feed cards.
-- New bilingual stylist invitation CTA with timed EN/FA text swap and magnetic button behavior.
-- New footer prologue with scroll-scaled ATELIER NOIR wordmark and shutter-like close.
-- Global home micro-interactions: magnetic buttons, heading reveals, image reveal clipping, grain overlay, contextual cursor enhancements, and left-edge scroll progress.
-- GSAP 3.12.5 plugins added: ScrollTrigger, Observer, CustomEase, Flip, MotionPathPlugin.
-- Lenis smooth scroll updated to sync with ScrollTrigger via `lenis.on('scroll', ScrollTrigger.update)` and `gsap.ticker.add((time) => lenis.raf(time * 1000))`.
-- Locale JSON additions created for `locales/en-US.json` and `locales/fa-IR.json`.
+## Aktuell umgesetzte Features
+- Professioneller Sticky-Glassmorphism-Header mit Brand-SVG, responsivem SVG-Hamburger-Menü und Warenkorb-/Favoriten-Badges.
+- GSAP- und ScrollTrigger-Animationen für Hero, Karten, Scroll-Reveals, Floating-Orbs und Produkt-Rendering.
+- Produktkatalog mit 12 kuratierten Beispielprodukten.
+- Erweiterte Filter:
+  - Suche
+  - Kategorie
+  - Schlafposition
+  - Härtegrad
+  - Temperatur-/Kühlungsprofil
+  - Material
+  - Anti-Allergie
+  - Höhe
+  - Budget-Slider
+  - Spezialfeatures wie طبی، بدون انتقال حرکت، هتلی، اکو
+  - Sortierung nach Preis, Bewertung, Neuheit und Empfehlung
+- Grid-/Listenansicht und Pagination.
+- Favoritenverwaltung mit `localStorage`.
+- Warenkorb mit Mengen und Gesamtsumme in einem Drawer.
+- Vergleichsfunktion für bis zu drei Produkte.
+- Smart-Sleep-Match-Quiz für personalisierte Produktempfehlungen.
+- Einzigartige Experience-Module:
+  - Schlafklima-Simulator
+  - Körperdruck-Karte
+  - Dekor-/Farbpaletten-Simulator
+- Newsletter-Formular mit clientseitigem Feedback.
+- Voll responsives Layout für Desktop, Tablet und Mobile.
+- Barrierebewusste Struktur mit semantischen Bereichen, Labels und ARIA-Attributen.
 
-## Functional entry URIs
-- `/` or `/index.html` — cinematic homepage.
-- `/?lang=fa` — Farsi/RTL alternate entry metadata is present; runtime language is controlled by the existing EN/FA selector and `atelier-locale` localStorage key.
-- `/shop/` — existing product catalog route referenced by CTAs.
-- `/shop/product/?slug=<product-slug>` — product detail route referenced from film strip and quickview.
-- `/collections/men/` and `/collections/women/` — existing collection links in the preserved nav/app chrome.
-- `/stylist/` — stylist invitation CTA target.
-- `/atelier/`, `/journal/`, `/compare/`, `/checkout/`, `/account/`, `/contact/` — existing app routes linked by the injected chrome.
+## Funktionale Entry URIs
+- `/index.html` — Hauptseite
+- `/index.html#hero-section` — Hero-Bereich
+- `/index.html#products-section` — Produktkatalog mit Filtern
+- `/index.html#advisor-section` — Schlafberater/Quiz
+- `/index.html#innovation-section` — Interaktive Experience-Tools
+- `/index.html#journal-section` — Ratgeberkarten
+- `/index.html#contact-section` — Footer/Kontakt/Newsletter
 
-## Data models, structures, and storage services used
-- Static data source: `js/data.js`, exposed as `window.ATELIER_DATA`.
-  - `brand`: name, localized tagline, currency rate.
-  - `products[]`: slug, gender, category, localized name, price, color, fabric, sizes, season, badge, sustainability, rating, origin, fit, image, video, story, and trace array.
-  - `journal[]`: localized editorial article data.
-- Client persistence: browser `localStorage` keys already used by `js/app.js`:
-  - `atelier-locale`
-  - `atelier-cart`
-  - `atelier-wishlist`
-  - `atelier-compare`
-- No server database or table schema is used for this implementation.
+## Öffentliche URLs
+- Produktion: Noch nicht veröffentlicht. Zum Veröffentlichen bitte den **Publish Tab** verwenden.
+- API-Endpunkte: Keine externen APIs im Einsatz.
 
-## Public URLs / API endpoints
-- Production URL: not published in this editing session.
-- API endpoints: none. This is a static frontend implementation using local static data and browser localStorage.
+## Datenmodelle und Speicherung
+Die Produktdaten sind clientseitig in `js/app.js` als Array gespeichert. Jeder Produktdatensatz enthält:
+- `id`
+- `name`
+- `category`
+- `price`
+- `rating`
+- `newness`
+- `sleep`
+- `firmness`
+- `cooling`
+- `material`
+- `allergy`
+- `height`
+- `features`
+- `desc`
+- `image`
 
-## Files changed
-- `index.html` — rebuilt homepage sections and added required GSAP/Lenis/plugin script includes plus `js/home-cinematic.js`.
-- `css/style.css` — appended `/* === HOMEPAGE CINEMATIC v2 === */` styles.
-- `js/home-cinematic.js` — new self-contained IIFE for all cinematic homepage motion and rendering.
-- `js/app.js` — kept state logic, added new i18n keys, synced Lenis with ScrollTrigger, and disabled legacy home hero conflicts.
-- `js/data.js` — installed from provided upload, unchanged in structure.
-- `locales/en-US.json` and `locales/fa-IR.json` — added homepage cinematic locale keys.
+Persistenz im Browser:
+- `dreamSleepFavorites` in `localStorage`
+- `dreamSleepCompare` in `localStorage`
+- `dreamSleepCart` in `localStorage`
 
-## Features not yet implemented
-- True GSAP Club SplitText plugin is not bundled; a custom accessible splitter is used instead.
-- DrawSVGPlugin is not bundled; trace lines use native SVG stroke-dashoffset animation.
-- Checkout remains a static prototype and does not process payments.
-- Product quickview adds to localStorage cart only; no backend inventory or order persistence exists.
+## Noch nicht implementiert
+- Echte Zahlungsabwicklung.
+- Backend-gestützte Bestellungen und Lagerverwaltung.
+- Benutzerkonten oder Authentifizierung.
+- Live-Chat oder CRM-Integration.
 
-## Recommended next steps
-1. Art-direct final product imagery/video assets to replace third-party editorial placeholders with owned campaign media.
-2. QA on physical iOS/Android devices for scroll performance and video autoplay behavior.
-3. Add image `srcset`/AVIF/WebP variants for production performance.
-4. Add structured product metadata for SEO on product-detail routes.
-5. Publish from the Publish tab when ready to make the site live.
+## Empfohlene nächste Schritte
+1. Reale Produktbilder, Preise und Lagerbestände einpflegen.
+2. Optional die RESTful Table API für dynamische Produktverwaltung nutzen.
+3. Checkout als statisches Anfrageformular oder über einen externen, CORS-fähigen Dienst anbinden.
+4. SEO-Texte und strukturierte Daten für Produkte ergänzen.
+5. Performance-Audit mit echten Bildern durchführen.
