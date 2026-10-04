@@ -1,82 +1,61 @@
-# رویاخواب لوکس | Luxury Sleep Studio
+# ATELIER NOIR
 
-## Ziel des Projekts
-Eine hochwertige, moderne, statische E-Commerce-Landingpage für تشک، لحاف و کالای خواب mit persischer RTL-Oberfläche, professionellem Header, SVG-Menü, GSAP-Animationen, erweiterten Filtern und einzigartigen interaktiven Beratungstools.
+A scroll-driven luxury fashion boutique, built as a static site. Bilingual EN/FA with
+full RTL support, and the homepage composed as a continuous cinematic sequence rather
+than a stack of sections.
 
-## Aktuell umgesetzte Features
-- Professioneller Sticky-Glassmorphism-Header mit Brand-SVG, responsivem SVG-Hamburger-Menü und Warenkorb-/Favoriten-Badges.
-- GSAP- und ScrollTrigger-Animationen für Hero, Karten, Scroll-Reveals, Floating-Orbs und Produkt-Rendering.
-- Produktkatalog mit 12 kuratierten Beispielprodukten.
-- Erweiterte Filter:
-  - Suche
-  - Kategorie
-  - Schlafposition
-  - Härtegrad
-  - Temperatur-/Kühlungsprofil
-  - Material
-  - Anti-Allergie
-  - Höhe
-  - Budget-Slider
-  - Spezialfeatures wie طبی، بدون انتقال حرکت، هتلی، اکو
-  - Sortierung nach Preis, Bewertung, Neuheit und Empfehlung
-- Grid-/Listenansicht und Pagination.
-- Favoritenverwaltung mit `localStorage`.
-- Warenkorb mit Mengen und Gesamtsumme in einem Drawer.
-- Vergleichsfunktion für bis zu drei Produkte.
-- Smart-Sleep-Match-Quiz für personalisierte Produktempfehlungen.
-- Einzigartige Experience-Module:
-  - Schlafklima-Simulator
-  - Körperdruck-Karte
-  - Dekor-/Farbpaletten-Simulator
-- Newsletter-Formular mit clientseitigem Feedback.
-- Voll responsives Layout für Desktop, Tablet und Mobile.
-- Barrierebewusste Struktur mit semantischen Bereichen, Labels und ARIA-Attributen.
+**[Live demo](https://amir-pce.github.io/ATELIER-NOIR/Clothes/)** · [full feature list](Clothes/README.md)
 
-## Funktionale Entry URIs
-- `/index.html` — Hauptseite
-- `/index.html#hero-section` — Hero-Bereich
-- `/index.html#products-section` — Produktkatalog mit Filtern
-- `/index.html#advisor-section` — Schlafberater/Quiz
-- `/index.html#innovation-section` — Interaktive Experience-Tools
-- `/index.html#journal-section` — Ratgeberkarten
-- `/index.html#contact-section` — Footer/Kontakt/Newsletter
+## What makes it worth looking at
 
-## Öffentliche URLs
-- Produktion: Noch nicht veröffentlicht. Zum Veröffentlichen bitte den **Publish Tab** verwenden.
-- API-Endpunkte: Keine externen APIs im Einsatz.
+The homepage is one scroll-scrubbed timeline. Nothing simply fades in.
 
-## Datenmodelle und Speicherung
-Die Produktdaten sind clientseitig in `js/app.js` als Array gespeichert. Jeder Produktdatensatz enthält:
-- `id`
-- `name`
-- `category`
-- `price`
-- `rating`
-- `newness`
-- `sleep`
-- `firmness`
-- `cooling`
-- `material`
-- `allergy`
-- `height`
-- `features`
-- `desc`
-- `image`
+- **Cinematic hero** — autoplay runway video with parallax zoom, a marquee tagline, a
+  split-character title reveal, and a cursor that changes state by context.
+- **Pinned manifesto** where the text illuminates word by word as you scroll through it.
+- **A 35mm film-strip product row** built from the catalogue data, with hover
+  interactions on each cell and a GSAP **Flip** quickview — Flip animates between two
+  real DOM states rather than faking the transition.
+- **A cinematographer section** with a sticky viewfinder: rule-of-thirds grid, REC dot,
+  shutter flash, scene crossfades, camera shake, and a timecode driven by scroll
+  position.
+- **Fabric gallery** using an SVG displacement ripple, with traceability timelines read
+  from each product's `trace` array.
+- **Bilingual CTA** that swaps EN and FA on a timer, with a magnetic button.
 
-Persistenz im Browser:
-- `dreamSleepFavorites` in `localStorage`
-- `dreamSleepCompare` in `localStorage`
-- `dreamSleepCart` in `localStorage`
+## The technical parts that mattered
 
-## Noch nicht implementiert
-- Echte Zahlungsabwicklung.
-- Backend-gestützte Bestellungen und Lagerverwaltung.
-- Benutzerkonten oder Authentifizierung.
-- Live-Chat oder CRM-Integration.
+**Smooth scroll and scroll triggers have to share one clock.** Lenis and GSAP
+ScrollTrigger each want to own the frame loop, and left alone they drift apart — the
+animation lands slightly before or after the scroll position that should drive it. They
+are synced explicitly:
 
-## Empfohlene nächste Schritte
-1. Reale Produktbilder, Preise und Lagerbestände einpflegen.
-2. Optional die RESTful Table API für dynamische Produktverwaltung nutzen.
-3. Checkout als statisches Anfrageformular oder über einen externen, CORS-fähigen Dienst anbinden.
-4. SEO-Texte und strukturierte Daten für Produkte ergänzen.
-5. Performance-Audit mit echten Bildern durchführen.
+```js
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time) => lenis.raf(time * 1000));
+```
+
+**Locale is state, not a separate build.** EN and FA live in `locales/en-US.json` and
+`locales/fa-IR.json`, with the active language held in `localStorage` under
+`atelier-locale`, so switching language does not reload the page or lose the cart.
+
+**Cart, wishlist, compare and locale were already working** in `js/app.js` before the
+homepage was rebuilt, and the rebuild preserved them rather than starting over. The
+header and navigation were deliberately frozen for the same reason.
+
+## Also in this repository
+
+A second, separate storefront — **رویاخواب لوکس / Luxury Sleep Studio**, a Persian RTL
+landing page for mattresses and bedding, with GSAP animation, advanced filtering and an
+interactive product-advisor tool. It sits at the repository root.
+
+**[Live demo](https://amir-pce.github.io/ATELIER-NOIR/)** · [documentation](README.fa.md)
+
+The two share no code. They are in one repository by accident of history, not by design.
+
+## Built with
+
+HTML · CSS · JavaScript · GSAP 3.12.5 (ScrollTrigger, Observer, CustomEase, Flip,
+MotionPath) · Lenis · SVG filters
+
+Static throughout. No build step.
